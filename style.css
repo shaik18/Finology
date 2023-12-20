@@ -1,0 +1,69 @@
+/* top container*/
+body
+{
+    font-family:'Montserrat', sans-serif;
+    font-weight: 400;
+}
+#middle-container
+{
+    padding: 3% 7% 7%;
+}
+#main-head
+{
+    color:#708090;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'ubuntu';
+}
+
+#top-container
+{
+    padding-top: 1%;
+}
+
+.form-label
+{
+    padding-left: 45%;
+    font-weight: 500;
+    font-family: 'Montserrat';
+}
+.nav-link
+{
+    font-family: 'Montserrat', sans-serif;
+    color:black;
+}
+#marvel
+{
+    font-family: 'ubuntu';
+    color: #023020;
+    font-size: 60px;
+    background-color: #7393B3 ;
+}
+.bg
+{
+    background-color: black;
+}
+.fluid-container
+{
+    padding: 0% 10% 0% 10%;
+    background-color: #7393B3 ;
+}
+.navbar
+{
+    background-color: #7393B3 ;
+}
+#nav-img
+{
+    width: 50px;
+    position: relative;
+    margin-right: auto;
+}
+
+
+@media (max-width:720px)
+{
+    #marvel
+    {
+        font-size: 25px;
+    }
+}

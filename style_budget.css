@@ -1,0 +1,141 @@
+/* top container*/
+/* body
+{
+    font-family:'Montserrat', sans-serif;
+    font-weight: 400;
+} */
+#middle-container
+{
+    padding: 3% 7% 7%;
+}
+#main-head
+{
+    color:#7393B3;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'ubuntu';
+}
+
+#top-container
+{
+    padding-top: 1%;
+}
+
+.form-label
+{
+    padding-left: 45%;
+    font-weight: 500;
+    font-family: 'Montserrat';
+}
+.nav-link
+{
+    /* font-weight: bold; */
+    font-family: 'Montserrat', sans-serif;
+    color:black;
+}
+#marvel
+{
+    font-family: 'ubuntu';
+    color: #023020;
+    font-size: 60px;
+    background-color: #7393B3;
+}
+.bg
+{
+    background-color: black;
+}
+.fluid-container
+{
+    padding: 0% 10% 0% 10%;
+    background-color: #7393B3;
+}
+.navbar
+{
+    background-color: #7393B3;
+}
+#nav-img
+{
+    width: 50px;
+    position: relative;
+    margin-right: auto;
+}
+
+* 
+{
+    box-sizing: border-box; 
+}
+
+/* Remove margins and padding from the list */
+.uldes {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the list items */
+  .uldes .to-do-li{
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  
+  /* Darker background-color on hover */
+  .uldes .to-do-li:hover {
+    background: #FFC300 ;
+  }
+  
+
+.header 
+{
+    background-color:#900C3F;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+
+.header:after 
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.main-input 
+{
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+.addBtn {
+    font-family: ubuntu;
+    padding: 10px;
+    width: 25%;
+    background: #FFC300;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+  }
+  
+  .addBtn:hover {
+    background-color: #89CFF0;
+  }
+
