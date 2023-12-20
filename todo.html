@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- marvel font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    <!-- bootstrap css cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- font awesome cdn -->
+    <script src="https://kit.fontawesome.com/1094429d81.js" crossorigin="anonymous"></script>
+
+    <!-- bootstrap min js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
+    <title>to-do-list</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style_todo.css">
+
+</head>
+<body>
+    <section id="title">
+        <!-- nav bar-->
+            <div class="fluid-container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <img src="images/nav-img.jpg" id="nav-img">
+                    <a class="navbar-brand" href="#"><span id="marvel">Finology</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#demo" aria-controls="demo" aria-expanded="false" aria-label="toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="demo">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>   
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Products
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark ">
+                              <li class="drop-down"><a class="dropdown-item" href="budget.html">Bubget Calculator</a></li>
+                              <li class="drop-down"><a class="dropdown-item" href="todo.html">Financial to-do-list</a></li>
+                            </ul>
+                          </li> 
+                    </ul>
+                    </div>
+                </nav>
+        </section>
+    <!--to do list-->
+    <br>
+    <br>
+    <h2 style="margin:5px; font-family: ubuntu,sans-serif;">TO DO LIST</h2>
+<section id="to-do-list">  
+<div class="row title">
+  <div class="container-size col-lg-6">
+      <div id="myDIV" class="header">
+          <input type="text" id="myInput" placeholder="Title...">
+          <span onclick="newElement()" class="addBtn">Add</span>
+      </div>
+      <ul class="uldes" id="myUL">
+          <li class="to-do-li">Hit the gym</li>
+      </ul>
+    </div>  
+    <div class="footer col-lg-6">
+      <h2 style="text-align: center;">Importance of to-do-list</h2>
+      <br>
+      <ul>
+        <li>To-do Lists make things manageable.</li>
+        <br>
+        <li>To-do Lists make sure we don’t forget anything.</li>
+        <br>
+        <li>To-do Lists help us make decisions.</li>
+        <br>
+        <li>To-do Lists help relieve stress.</li>
+      </ul>  
+    </div>
+    
+</div>   
+</section> 
+<script>
+// Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByClassName("to-do-li");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector(".uldes");
+list.addEventListener('click', function(ev) {
+  if (ev.target.className === 'to-do-li') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+    li.classList.add("to-do-li");
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>
